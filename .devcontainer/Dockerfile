@@ -5,7 +5,7 @@ RUN \
   apt-get install -y curl
 
 ENV \
-  CUSTOM_PORT="8080" \
+  CUSTOM_PORT="3000" \
   GUIAUTOSTART="true" \
   HOME="/"
 
