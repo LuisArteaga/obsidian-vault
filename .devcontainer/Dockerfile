@@ -6,7 +6,7 @@ RUN echo "**** install packages ****" && \
     apt-get install -y --no-install-recommends curl libgtk-3-0 libnotify4 libatspi2.0-0 libsecret-1-0 libnss3 desktop-file-utils fonts-noto-color-emoji git ssh-askpass snapd && \
     apt-get autoclean && rm -rf /var/lib/apt/lists/* /var/tmp/* /tmp/*
 
-RUN snap install core
+#RUN snap install core
 
 # Set version label
 ARG OBSIDIAN_VERSION=1.4.16
@@ -15,7 +15,7 @@ ARG OBSIDIAN_VERSION=1.4.16
 RUN echo "**** download obsidian ****" && \
     curl --location --output obsidian.snap "https://github.com/obsidianmd/obsidian-releases/releases/download/v${OBSIDIAN_VERSION}/obsidian_${OBSIDIAN_VERSION}_amd64.snap"
 
-RUN snap install obsidian.snap --dangerous --classic
+#RUN snap install obsidian.snap --dangerous --classic
 
 # Environment variables
 ENV CUSTOM_PORT="8080" \
