@@ -25,8 +25,8 @@ ENV CUSTOM_PORT="8080" \
 
 # Add local files
 # COPY root/ /
-# EXPOSE 8080 8443
-# VOLUME ["/config","/vaults"]
+EXPOSE 8080 8443
+VOLUME ["/config","/vaults"]
 
 # Define a healthcheck
 HEALTHCHECK CMD curl --fail http://localhost:8080/ || exit 1
