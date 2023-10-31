@@ -3,19 +3,18 @@ FROM ghcr.io/linuxserver/baseimage-kasmvnc:debianbullseye
 # Update and install extra packages.
 RUN echo "**** install packages ****" && \
     apt-get update && \
-    apt-get install -y --no-install-recommends curl libgtk-3-0 libnotify4 libatspi2.0-0 libsecret-1-0 libnss3 desktop-file-utils fonts-noto-color-emoji git ssh-askpass snapd && \
+    apt-get install -y --no-install-recommends curl libgtk-3-0 libnotify4 libatspi2.0-0 libsecret-1-0 libnss3 desktop-file-utils fonts-noto-color-emoji git ssh-askpass && \
     apt-get autoclean && rm -rf /var/lib/apt/lists/* /var/tmp/* /tmp/*
-
-#RUN snap install core
 
 # Set version label
 ARG OBSIDIAN_VERSION=1.4.16
 
 # Download and install Obsidian
 RUN echo "**** download obsidian ****" && \
-    curl --location --output obsidian.snap "https://github.com/obsidianmd/obsidian-releases/releases/download/v${OBSIDIAN_VERSION}/obsidian_${OBSIDIAN_VERSION}_amd64.snap"
+    curl --location --output obsidian.AppImage "https://github.com/obsidianmd/obsidian-releases/releases/download/v${OBSIDIAN_VERSION}/obsidian_${OBSIDIAN_VERSION}_amd64.AppImage"
 
-#RUN snap install obsidian.snap --dangerous --classic
+# chmod u+x obsidian.AppImage
+# obsidian.AppImage
 
 # Environment variables
 ENV CUSTOM_PORT="8080" \
