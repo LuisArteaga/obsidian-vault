@@ -1,11 +1,5 @@
 FROM ghcr.io/linuxserver/baseimage-kasmvnc:debianbullseye
 
-LABEL maintainer="github@sytone.com" \
-      org.opencontainers.image.authors="github@sytone.com" \
-      org.opencontainers.image.source="https://github.com/sytone/obsidian-remote" \
-      org.opencontainers.image.title="Container hosted Obsidian MD" \
-      org.opencontainers.image.description="Hosted Obsidian instance allowing access via web browser"
-
 # Update and install extra packages.
 RUN echo "**** install packages ****" && \
     apt-get update && \
