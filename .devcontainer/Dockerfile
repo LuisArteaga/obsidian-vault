@@ -21,7 +21,7 @@ ENV CUSTOM_PORT="8080" \
     PASSWORD="" \
     SUBFOLDER="" \
     TITLE="Obsidian v${OBSIDIAN_VERSION}" \
-    FM_HOME="/vaults"
+    FM_HOME="/config"
 
 # Add local files
 EXPOSE 8080 8443
