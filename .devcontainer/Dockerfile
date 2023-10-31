@@ -24,9 +24,12 @@ ENV CUSTOM_PORT="8080" \
     FM_HOME="/vaults"
 
 # Add local files
-COPY root/ /
 EXPOSE 8080 8443
 VOLUME ["/config","/vaults"]
 
 # Define a healthcheck
 HEALTHCHECK CMD curl --fail http://localhost:8080/ || exit 1
+
+# Error Messages
+# ERROR: failed to solve: failed to compute cache key: failed to calculate checksum of ref 9a70db4b-5ad6-49ef-8d5e-ae1fb04c998b::l38l2l7frsyvka9p7e5aqgpkl: "/root": not found
+# COPY root/ /
