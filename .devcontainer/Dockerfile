@@ -15,6 +15,6 @@ RUN rm -rf \
     /var/tmp/*
 
 RUN curl \
-  https://github.com/obsidianmd/obsidian-releases/releases/download/v0.13.19/Obsidian-0.13.19.AppImage \
+  https://github.com/obsidianmd/obsidian-releases/releases/download/v1.4.16/Obsidian-1.4.16.AppImage \
   -L \
   -o obsidian.AppImage
