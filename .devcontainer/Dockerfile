@@ -1,12 +1,12 @@
 FROM ghcr.io/linuxserver/baseimage-kasmvnc:fedora37
 
-RUN apk add --no-cache firefox
+#RUN apk add --no-cache firefox
 
-COPY /root /
+#COPY /root /
 
-RUN \
-  apt-get update && \
-  apt-get install -y curl
+#RUN \
+#  apt-get update && \
+#  apt-get install -y curl
 
 ENV \
   TITLE="Test"
@@ -19,7 +19,7 @@ ENV \
 #    /var/lib/apt/lists/* \
 #    /var/tmp/*
 
-RUN curl \
-  https://github.com/obsidianmd/obsidian-releases/releases/download/v1.4.16/Obsidian-1.4.16.AppImage \
-  -L \
-  -o obsidian.AppImage
+#RUN curl \
+#  https://github.com/obsidianmd/obsidian-releases/releases/download/v1.4.16/Obsidian-1.4.16.AppImage \
+#  -L \
+#  -o obsidian.AppImage
