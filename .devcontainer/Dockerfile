@@ -11,8 +11,8 @@ ARG OBSIDIAN_VERSION=1.4.16
 
 # Download and install Obsidian
 RUN echo "**** download obsidian ****" && \
-    curl --location --output obsidian.deb "https://github.com/obsidianmd/obsidian-releases/releases/download/v${OBSIDIAN_VERSION}/obsidian_${OBSIDIAN_VERSION}_amd64.deb" && \
-    dpkg -i obsidian.deb
+    curl --location --output obsidian.snap "https://github.com/obsidianmd/obsidian-releases/releases/download/v${OBSIDIAN_VERSION}/obsidian_${OBSIDIAN_VERSION}_amd64.snap" && \
+    snap install obsidian.snap --dangerous --classic
 
 # Environment variables
 ENV CUSTOM_PORT="8080" \
